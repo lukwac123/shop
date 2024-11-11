@@ -3,8 +3,11 @@ from django.db import models
 # Create your models here.
 
 class Category(models.Model):
+    objects = models.Manager()
+
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
+
 
     class Meta:
         ordering = ['name']
@@ -18,6 +21,8 @@ class Category(models.Model):
         return self.name
 
 class Product(models.Model):
+    objects = models.Manager()
+
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
