@@ -1,5 +1,3 @@
-from opcode import name_op
-
 from django.urls import path
 from . import views
 

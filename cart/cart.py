@@ -1,6 +1,4 @@
 from decimal import Decimal
-from itertools import product
-
 from django.conf import settings
 from shop.models import Product
 
@@ -16,7 +14,28 @@ class Cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
-    def __add__(self, product, quantity=1,override_quantity=False):
+    def __iter__(self):
+        """
+        Iteracja przez elementy koszyka na zakupy i pobranie produktów z bazy danych.
+        """
+        product_ids = self.cart.keys()
+        # Pobranie obiektów produktów i dodanie ich do koszyka na zakupy.
+        products = Product.objects.filter(id__in=product_ids)
+        cart = self.cart.copy()
+        for product in products:
+            cart[str(product.id)]['product'] = product
+        for item in cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
+
+    def __len__(self):
+        """
+        Obliczanie liczby wszystkich elementów w koszyku na zakupy.
+        """
+        return sum(item['quantity'] for item in self.cart.values())
+
+    def add(self, product, quantity=1,override_quantity=False):
         """
         Dodanie produktu do koszyka lub zmiana jego ilości
         """
@@ -41,27 +60,6 @@ class Cart:
         if product_id in self.cart:
             del self.cart[product_id]
             self.save()
-
-    def __iter__(self):
-        """
-        Iteracja przez elementy koszyka na zakupy i pobranie produktów z bazy danych.
-        """
-        product_ids = self.cart.keys()
-        # Pobranie obiektów produktów i dodanie ich do koszyka na zakupy.
-        products = Product.objects.filter(id__in=product_ids)
-        cart = self.cart.copy()
-        for product in products:
-            cart[str(product.id)]['product'] = product
-        for item in cart.values():
-            item['price'] = Decimal(item['price'])
-            item['total price'] = item['price'] * item['quantity']
-            yield item
-
-    def __len__(self):
-        """
-        Obliczanie liczby wszystkich elementów w koszyku na zakupy.
-        """
-        return sum(item['quantity'] for item in self.cart.vlues())
 
     def get_total_price(self):
         """

@@ -1,4 +1,4 @@
-{% extends "shop/base.html %}
+{% extends "shop/base.html" %}
 {% load static %}
 
 {% block title %}
@@ -28,22 +28,29 @@
                             </a>
                         </td>
                         <td>{{ product.name }}</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>
+                            <form action="{% url "cart:cart_add" product.id %}" method="post">
+                                {{ item.update_quantity_form.quantity }}
+                                {{ item.update_quantity_form.update }}
+                                <input type="submit" value="Zmień">
+                                {% csrf_token %}
+                            </form>
+                        </td>
                         <td>
                             <form action="{% url "cart:cart_remove" product.id %}" method="post">
                                 <input type="submit" value="Usuń">
                                 {% csrf_token %}
                             </form>
                         </td>
-                        <td class="num">${{ item.price }}</td>
-                        <td class="num">${{ item.total_price }}</td>
+                        <td class="num">{{ item.price }} zł</td>
+                        <td class="num">{{ item.total_price }} zł</td>
                     </tr>
                 {% endwith %}
             {% endfor %}
             <tr class="total">
                 <td>Razem</td>
                 <td colspan="4"></td>
-                <td class="num">${{ cart.get_total_price }}</td>
+                <td class="num">{{ cart.get_total_price }} zł</td>
             </tr>
         </tbody>
     </table>
