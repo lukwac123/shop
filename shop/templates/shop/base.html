@@ -19,7 +19,7 @@
                         {{ total_items }} item{{ total_items|pluralize }}
                         {{ cart.get_total_price }} zł
                     </a>
-                {% else %}
+                {% elif not order %}
                     Koszyk jest pusty.
                 {% endif %}
             {% endwith %}
