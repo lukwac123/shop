@@ -32,5 +32,7 @@ def stripe_webhook(request):
                 return HttpResponse(status=404)
             # Oznaczenie zamówienia jako zapłaconego.
             order.paid = True
+            # Zapisanie identyfikatora płatności Stripe.
+            order.stripe_id = session.payment_intent
             order.save()
     return HttpResponse(status=200)
