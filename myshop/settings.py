@@ -146,4 +146,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Ustawienia Stripe (w wersji testowej)
 STRIPE_PUBLISHABLE_KEY = 'pk_test_51QMpOYGvjNBFGKU841hpF0FiVVPSUwZGY59eaEPzYb0W7I8mnV3o89zZ4c0paIcO0ZdLlaXAQGiN2Kf8JISuByRr00Nd83RVrw' # Klucz do publikacji.
 STRIPE_SECRET_KEY = 'sk_test_51QMpOYGvjNBFGKU831rbtWAOtWISk2QyXEwtxLxj43mCL3o5f4VT3M9ntuBsVdeGzgrh7cAWqWraterkR9cS0B6K00EjpnS5Az' # Klucz tajny.
-STRIPE_API_VERSION = '2024-06-20' # Zastosowana wersja API.
+STRIPE_API_VERSION = '2024-10-28.acacia' # Zastosowana wersja API.
+STRIPE_WEBHOOK_SECRET = 'whsec_c6fc2b44d256afca7fe2145e917da9a281e4e6641894468706df7b816d7c890c' # Punkt końcowy Webhook.
