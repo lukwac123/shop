@@ -1,3 +1,5 @@
+from priv import *
+
 """
 Django settings for myshop project.
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-m$h6w36z*!s&)&9qk8wx&65k$j+-u*%&vw(m_6qet+a!-82(y='
+SECRET_KEY = MY_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -146,7 +148,7 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Ustawienia Stripe (w wersji testowej)
-STRIPE_PUBLISHABLE_KEY = 'pk_test_51QMpOYGvjNBFGKU841hpF0FiVVPSUwZGY59eaEPzYb0W7I8mnV3o89zZ4c0paIcO0ZdLlaXAQGiN2Kf8JISuByRr00Nd83RVrw' # Klucz do publikacji.
-STRIPE_SECRET_KEY = 'sk_test_51QMpOYGvjNBFGKU831rbtWAOtWISk2QyXEwtxLxj43mCL3o5f4VT3M9ntuBsVdeGzgrh7cAWqWraterkR9cS0B6K00EjpnS5Az' # Klucz tajny.
-STRIPE_API_VERSION = '2024-10-28.acacia' # Zastosowana wersja API.
-STRIPE_WEBHOOK_SECRET = 'whsec_c6fc2b44d256afca7fe2145e917da9a281e4e6641894468706df7b816d7c890c' # Punkt końcowy Webhook.
+STRIPE_PUBLISHABLE_KEY = MY_STRIPE_PUBLISHABLE_KEY # Klucz do publikacji.
+STRIPE_SECRET_KEY = MY_STRIPE_SECRET_KEY # Klucz tajny.
+STRIPE_API_VERSION = MY_STRIPE_API_VERSION # Zastosowana wersja API.
+STRIPE_WEBHOOK_SECRET = MY_STRIPE_WEBHOOK_SECRET # Punkt końcowy Webhook.
