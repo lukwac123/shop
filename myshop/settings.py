@@ -39,12 +39,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #Moje aplikacje
-    'rosetta',
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'payment.apps.PaymentConfig',
     'coupons.apps.CouponsConfig',
+    'rosetta',
+    'parler',
 
     # Pozostałe aplikacje
     'django.contrib.admin',
@@ -127,6 +128,18 @@ LANGUAGES = [
     ('pl', _('polski')),
     ('en', _('angielski')),
 ]
+
+# Ustawienia django-parler
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'pl'},
+    ),
+    'default': {
+        'fallback': 'pl',
+        'hide_untranslated': False,
+    }
+}
 
 TIME_ZONE = 'UTC'
 
