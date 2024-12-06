@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-12-06 11:21+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2024-12-06 11:00+0000\n"
+"Last-Translator:   <lukasz-waclawek@wp.pl>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.1\n"
 
 #: orders/models.py:11
 msgid "imię"
@@ -98,6 +99,8 @@ msgid ""
 "              \"%(code)s\" (%(discount)s%% rabatu)\n"
 "          "
 msgstr ""
+"\n"
+"\"%(code)s\" (%(discount)s%% off)"
 
 #: orders/templates/orders/order/create.html:27
 #: orders/templates/orders/order/pdf.html:54
@@ -156,6 +159,8 @@ msgid ""
 "                                \"%(code)s\" (%(discount)s%% rabatu)\n"
 "                            "
 msgstr ""
+"\n"
+"\"%(code)s\" (%(discount)s%% off)"
 
 #: orders/templates/orders/order/pdf.html:61
 msgid "Zapłacono"
