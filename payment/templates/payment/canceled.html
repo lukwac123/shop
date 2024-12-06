@@ -1,8 +1,9 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %}Płatność anulowana{% endblock title %}
+{% block title %}{% trans "Płatność anulowana" %}.{% endblock title %}
 
 {% block content %}
-    <h1>Twoja płatność nie została przetworzona</h1>
-    <p>Wystąpił problem podczas przetwarzania płatności.</p>
+    <h1>{% trans "Twoja płatność nie została przetworzona" %}.</h1>
+    <p>{% trans "Wystąpił problem podczas przetwarzania płatności" %}.</p>
 {% endblock content %}

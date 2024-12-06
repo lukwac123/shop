@@ -1,0 +1,166 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-06 11:21+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: orders/models.py:11
+msgid "imię"
+msgstr "first name"
+
+#: orders/models.py:12
+msgid "nazwisko"
+msgstr "last name"
+
+#: orders/models.py:13
+msgid "e-mail"
+msgstr "e-mail"
+
+#: orders/models.py:14
+msgid "adres"
+msgstr "address"
+
+#: orders/models.py:15
+msgid "kod pocztowy"
+msgstr "postal code"
+
+#: orders/models.py:16
+msgid "miejscowość"
+msgstr "city"
+
+#: orders/templates/admin/base.html:27
+msgid "Skip to main content"
+msgstr ""
+
+#: orders/templates/admin/base.html:42
+msgid "Welcome,"
+msgstr ""
+
+#: orders/templates/admin/base.html:47
+msgid "View site"
+msgstr ""
+
+#: orders/templates/admin/base.html:52
+msgid "Documentation"
+msgstr ""
+
+#: orders/templates/admin/base.html:56
+msgid "Change password"
+msgstr ""
+
+#: orders/templates/admin/base.html:60
+msgid "Log out"
+msgstr ""
+
+#: orders/templates/admin/base.html:72
+msgid "Breadcrumbs"
+msgstr ""
+
+#: orders/templates/admin/base.html:75
+msgid "Home"
+msgstr ""
+
+#: orders/templates/admin/base_site.html:3
+msgid "Django site admin"
+msgstr ""
+
+#: orders/templates/admin/base_site.html:6
+msgid "Django administration"
+msgstr ""
+
+#: orders/templates/orders/order/create.html:4
+#: orders/templates/orders/order/create.html:8
+msgid "Kasa"
+msgstr "Checkout"
+
+#: orders/templates/orders/order/create.html:10
+msgid "Zamówienie"
+msgstr "Your order"
+
+#: orders/templates/orders/order/create.html:20
+#, python-format
+msgid ""
+"\n"
+"              \"%(code)s\" (%(discount)s%% rabatu)\n"
+"          "
+msgstr ""
+
+#: orders/templates/orders/order/create.html:27
+#: orders/templates/orders/order/pdf.html:54
+msgid "Razem"
+msgstr "Total"
+
+#: orders/templates/orders/order/created.html:5
+#: orders/templates/orders/order/created.html:9
+msgid "Dziękujemy"
+msgstr "Thank You"
+
+#: orders/templates/orders/order/created.html:10
+msgid "Zamówienie zostało pomyślnie złożone. Jego numer to"
+msgstr "The order has been successfully placed. The number is"
+
+#: orders/templates/orders/order/pdf.html:4
+msgid "Mój sklep"
+msgstr "My shop"
+
+#: orders/templates/orders/order/pdf.html:6
+msgid "Faktura nr"
+msgstr "Invoice no."
+
+#: orders/templates/orders/order/pdf.html:9
+msgid "Nabywca"
+msgstr "Bill to"
+
+#: orders/templates/orders/order/pdf.html:16
+msgid "Kupione produkty"
+msgstr "Items bought"
+
+#: orders/templates/orders/order/pdf.html:20
+msgid "Produkt"
+msgstr "Product"
+
+#: orders/templates/orders/order/pdf.html:21
+msgid "Cena"
+msgstr "Price"
+
+#: orders/templates/orders/order/pdf.html:22
+msgid "Ilość"
+msgstr "Quantity"
+
+#: orders/templates/orders/order/pdf.html:23
+msgid "Wartość"
+msgstr "Cost"
+
+#: orders/templates/orders/order/pdf.html:37
+msgid "Suma częściowa"
+msgstr "Subtotal"
+
+#: orders/templates/orders/order/pdf.html:44
+#, python-format
+msgid ""
+"\n"
+"                                \"%(code)s\" (%(discount)s%% rabatu)\n"
+"                            "
+msgstr ""
+
+#: orders/templates/orders/order/pdf.html:61
+msgid "Zapłacono"
+msgstr "Paid"
+
+#: orders/templates/orders/order/pdf.html:61
+msgid "Oczekiwanie na płatność"
+msgstr "Pending payment"

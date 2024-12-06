@@ -1,18 +1,19 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
-{% block title %}Zapłąć za zamówienie{% endblock title %}
+{% block title %}{% trans "Zapłać za zamówienie" %}{% endblock title %}
 
 {% block content %}
-    <h1>Podsumowanie zamówienia</h1>
+    <h1>{% trans "Podsumowanie zamówienia" %}</h1>
     <table class="cart">
         <thead>
             <tr>
-                <th>Zdjęcie</th>
-                <th>Produkt</th>
-                <th>Cena</th>
-                <th>Ilość</th>
-                <th>Razem</th>
+                <th>{% trans "Zdjęcie" %}</th>
+                <th>{% trans "Produkt" %}</th>
+                <th>{% trans "Cena" %}</th>
+                <th>{% trans "Ilość" %}</th>
+                <th>{% trans "Razem" %}</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +30,7 @@
             {% endfor %}
             {% if order.coupon %}
                 <tr class="subtotal">
-                    <td>Suma częściowa</td>
+                    <td>{% trans "Suma częściowa" %}</td>
                     <td colspan="3"></td>
                     <td class="num">
                         {{ order.get_total_cost_before_discount|floatformat:2 }} zł
@@ -37,8 +38,9 @@
                 </tr>
                 <tr>
                     <td>
-                        kupon "{{ order.coupon.code }}"
-                        ({{ order.discount }}% rabatu)
+                        {% blocktrans with code=order.coupon.code discount=order.discount %}
+                            "{{ code }}" ({{ discount }}% rabatu)
+                        {% endblocktrans %}
                     </td>
                     <td colspan="3"></td>
                     <td class="num neg">
@@ -47,7 +49,7 @@
                 </tr>
             {% endif %}
             <tr class="total">
-                <td>Kwota do zapłaty</td>
+                <td>{% trans "Kwota do zapłaty" %}</td>
                 <td colspan="3"></td>
                 <td class="num">
                     {{ order.get_total_cost|floatformat:2 }} zł

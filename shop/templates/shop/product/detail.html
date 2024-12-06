@@ -1,4 +1,5 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
@@ -17,12 +18,12 @@
             {{ cart_product_form }}
             {% csrf_token %}
             <br>
-            <input type="submit" value="Dodaj do koszyka">
+            <input type="submit" value="{% trans "Dodaj do koszyka" %}">
         </form>
         {{ product.description|linebreaks }}
         {% if recommended_products %}
             <div class="recommendations">
-                <h3>Z tym produktem klienci kupowali również:</h3>
+                <h3>{% trans "Z tym produktem klienci kupowali również" %}</h3>
                 {% for p in recommended_products %}
                     <div class="item">
                         <a href="{{ p.get_absolute_ur }}">

@@ -1,13 +1,13 @@
 {% extends "shop/base.html" %}
-
+{% load i18n %}
 {% block title %}
-  Kasa
+  {% trans "Kasa" %}
 {% endblock %}
 
 {% block content %}
-  <h1>Kasa</h1>
+  <h1>{% trans "Kasa" %}</h1>
   <div class="order-info">
-    <h3>Zamówienie</h3>
+    <h3>{% trans "Zamówienie" %}</h3>
     <ul>
       {% for item in cart %}
         <li>
@@ -17,12 +17,14 @@
       {% endfor %}
       {% if cart.coupon %}
         <li>
-          Kupon "{{ cart.coupon.code }}" ({{ cart.coupon.discount }}% rabatu)
+          {% blocktrans with code=cart.coupon.code discount=cart.coupon.discount %}
+              "{{ code }}" ({{ discount }}% rabatu)
+          {% endblocktrans %}
           <span class="neg">-{{ cart.get_discount|floatformat:2 }} zł</span>
         </li>
       {% endif %}
     </ul>
-    <p>Razem: {{ cart.get_total_price_after_discount|floatformat:2 }} zł</p>
+    <p>{% trans "Razem" %}: {{ cart.get_total_price_after_discount|floatformat:2 }} zł</p>
   </div>
   <form method="post" class="order-form">
     {{ form.as_p }}

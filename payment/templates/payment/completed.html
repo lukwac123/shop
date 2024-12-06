@@ -1,8 +1,9 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 
-{% block title %}Płatność zakończyła się sukcesem.{% endblock title %}
+{% block title %}{% trans "Płatność zakończyła się sukcesem" %}.{% endblock title %}
 
 {% block content %}
-    <h1>Twoja płatność powiodła się</h1>
-    <p>Twoja płatność została pomyślnie przetworzona.</p>
+    <h1>{% trans "Twoja płatność powiodła się" %}.</h1>
+    <p>{% trans "Twoja płatność została pomyślnie przetworzona" %}.</p>
 {% endblock content %}
