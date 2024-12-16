@@ -2,6 +2,9 @@
 
 Użytkownicy sklepu mogą przeglądać katalog produktów dostępnych do sprzedaży, dodawać do koszyka. Po wybraniu produktów użytkownik może złożyć zamówienie i sfinalizować zakup przy pomocy płatności on-line. 
 
+![shop_strona_glowna](https://github.com/user-attachments/assets/e6188527-bee8-4037-98a3-c2f47dbb0f01)
+<sub>Rys. 1. Strona główna sklepu internetowego.</sub>
+
 ## Przebieg projektu:
 1. Utworzenie projektu, środowiska wirtualnego, aplikacji w Pythonie oraz instalacja Django.
 2. Utworzenie modeli katalogu produktów, dodanie ich do witryny administracyjnej oraz przygotowanie podstawowych widoków przeznaczonych do wyświetlania katalogu.
