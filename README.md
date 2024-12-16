@@ -1,4 +1,4 @@
-# Aplikacja Sklep internetowy zbudowana z użyciem framwork'a Django.
+# Aplikacja Sklep zbudowana z użyciem framwork'a Django.
 
 Użytkownicy sklepu mogą przeglądać katalog produktów dostępnych do sprzedaży, dodawać do koszyka. Po wybraniu produktów użytkownik może złożyć zamówienie i sfinalizować zakup przy pomocy płatności on-line. 
 
