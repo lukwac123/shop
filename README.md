@@ -19,3 +19,4 @@ Użytkownicy sklepu mogą przeglądać katalog produktów dostępnych do sprzeda
     * 6.5 Dynamiczne generowanie faktury do złożonego zamówienia w formacie PDF.
 7. Utworzenie systemu kuponów rabatowych.
 8. Opracowanie silnika rekomendacji produktów za pomocą Redis.
+9. Internacjonalizacja sklepu internetowego.
